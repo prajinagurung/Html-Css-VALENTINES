@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine? 💘</h1>
+        <div class="heart-container">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <div class="buttons">
+            <button id="yesButton">Yes :) </button>
+            <button id="noButton">No :( </button>
+        </div>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("noButton");
+        const yesButton = document.getElementById("yesButton");
+        const message = document.getElementById("message");
+
+        // Move "No" button randomly when hovered
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        // Show message when "Yes" is clicked
+        yesButton.addEventListener("click", () => {
+            message.innerHTML = "HAHA you can't say No. Yay! You said YES anyways Just wanted to take a moment to remind you how incredibly special you are to me. Every day talking with you and seeing your face makes my day, I’m so grateful to have you by my side. Your smile lights up my world. I love you more than words can express, and I can’t wait to make more amazing memories together. I’m sorry if I sometimes act a bit immature. I truly appreciate your patience with me. My intention is always to be your peace and bring joy to your life. You mean the world to me, and I’m working on being the best version of myself for you. Thank you for being understanding and loving. I just want you to know that you have my heart completely. I’m yours forever. No matter what life throws our way, I promise to always be there for you, supporting you and loving you through it all. I can’t imagine my life without you. I miss you every second of my life. It’s like a piece of my heart is missing when you’re not around. I can’t wait to hold you close again LOVE :( SO, SEE YOU SOON MY GORGEOUS VALENTINE IN THE WHOLE WORLD I love you so much 💖 ";
+            message.style.color = "red";
+            yesButton.style.display = "none";
+            noButton.style.display = "none";
+        });
+    </script>
+</body>
+</html>
